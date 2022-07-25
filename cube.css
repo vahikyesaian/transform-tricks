@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.box{
+    width: 500px;
+    height: 500px;
+    margin: 200px auto;
+    /* border: 1px solid blue; */
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotate3d(1,1,1,60deg);
+    transition: 50s;
+}
+.box:hover{
+    transform: rotate3d(1,1,1,400deg);
+}
+.box>div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;left: 0;
+    background-color: rgba(238, 130, 238, 0.549);
+}
+.box>div:nth-of-type(1){
+    transform: translateZ(250px);
+    background-color: rgba(0, 0, 139, 0.499);
+}
+.box>div:nth-of-type(2){
+    transform: translateZ(-250px);
+    background-color: rgba(0, 139, 139, 0.504);
+}
+.box>div:nth-of-type(3){
+    transform: translateZ(250px) rotateY(-90deg);
+    transform-origin: right;
+    background-color: rgba(184, 135, 11, 0.503);
+}
+.box>div:nth-of-type(4){
+    transform: translateZ(-250px) rotateY(-90deg);
+    transform-origin: left;
+    background-color: rgba(169, 169, 169, 0.501);
+}
+.box>div:nth-of-type(5){
+    transform: translateZ(250px) rotateX(90deg);
+    transform-origin: bottom;
+    background-color: rgba(139, 0, 0, 0.5);
+}
+.box>div:nth-of-type(6){
+    transform: translateZ(-250px) rotateX(90deg);
+    transform-origin: top;
+    background-color: rgba(148, 0, 211, 0.51);
+}
+.ball{
+    width: 400px;
+    height: 400px;
+    margin: 300px auto;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotate3d(1,1,1, 60deg);
+    transition: 50s;
+}
+.ball:hover{
+    transform: rotate3d(1,1,1, 560deg);
+}
+.ball>div{
+    width: 100%;
+    height: 100%;
+    background-color: royalblue;
+    border: 1px solid black;
+    border-radius: 30%;
+    position: absolute;
+    top: 0;left: 0;
+}
+.ball>div:nth-child(1){
+    transform: translateZ(200px);
+}
+.ball>div:nth-of-type(2){
+    transform: translateZ(-200px);
+}
+.ball>div:nth-of-type(3){
+    transform: translateZ(200px) rotateY(-90deg);
+    transform-origin: right;
+
+}
+.ball>div:nth-of-type(4){
+    transform: translateZ(-200px) rotateY(-90deg);
+    transform-origin: left;
+}
+.ball>div:nth-of-type(5){
+    transform: translateZ(200px) rotateX(90deg);
+    transform-origin: bottom;
+}
+.ball>div:nth-of-type(6){
+    transform: translateZ(-200px)rotateX(90deg);
+    transform-origin: top;
+}
